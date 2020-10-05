@@ -1,0 +1,42 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+            <!-- <alert  *ngIf = "alertMessage" [dismissible]="alertMessage" (onClosed)="onClosed(alert)" type="success">
+        Successfully Logout
+        </alert> -->
+      <!-- <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" /> -->
+    </div><br><br>
+    <h5>Login Form</h5> <br>
+    <!-- <alert  *ngIf = "error" [dismissible]="error" (onClosed)="onClosed(alert)" type="danger">
+    Invalid User name or Passowrd
+    </alert>    Login Form -->
+    <form [formGroup]="logForm" (submit)="onSubmit()" role="form">
+      <label for="user_type"> User Type</label><br>
+      <select  type="select" class="fadeIn second" name="user_type" formControlName="user_type">
+        <option value=0>User</option>
+        <option value=1>Admin</option>
+      </select><br>
+      <input type="text" id="email" class="fadeIn second" name="email" 
+        placeholder="Email" formControlName="email">
+      <input type="text" id="password" class="fadeIn third" name="password" 
+        placeholder="password" formControlName="password">
+      <input type="submit" class="fadeIn fourth" value="submit">
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <a class="underlineHover">Forgot Password?</a><br>
+      <small>If u have not an account please <a routerLink="/registration">click here</a></small>
+    </div>
+
+  </div>
+
+</div>
